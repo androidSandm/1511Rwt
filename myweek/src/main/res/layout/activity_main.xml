@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="example.zhanghai.com.weather.MainActivity">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        >
+        <ListView
+            android:id="@+id/clien_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <ListView
+            android:id="@+id/connection_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:background="@android:color/holo_blue_dark"
+            ></ListView>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_below="@id/relative"
+        >
+        <RadioButton
+            android:id="@+id/httpclient_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="HttpClient"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/httpurlconnection_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="HttpUrlConnection"
+            />
+
+    </RadioGroup>
+
+</LinearLayout>
